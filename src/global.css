@@ -1,0 +1,186 @@
+/*全局样式*/
+HTML,body,#app{
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+body, html, .App, .vue-template, .vertical-center {
+    width: 100%;
+    height: 100%;
+}
+.video-content {
+    width: 100%!important;
+    height: 100%!important;
+}
+
+
+.body-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 0;
+}
+.image-background{
+    background-image: url(https://img.brightgames.top/title.jpg);
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.avatar-cover {
+    position: absolute;
+    font-weight: bold;
+    text-decoration: underline;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: rgba(30, 30, 30, 0.85);
+    background: rgba(240, 240, 240, 0.3);
+    border-radius: 50%;
+}
+.avatar-cover:hover{
+    opacity:1;
+    transition: all .5s;
+}
+.card-image{
+    object-fit: cover;
+    /* max-height: 200px; */
+}
+.full-height {
+    height: 100%;
+    width: 100%;
+}
+.default-hidden{
+    overflow: hidden;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-name: breathe;
+    -webkit-animation-duration: 3500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+.default-hidden:hover{
+    opacity:1;
+    -webkit-animation-name: none;
+}
+
+@-webkit-keyframes breathe {
+    0% {
+        opacity: 0.01;
+    }
+
+    100% {
+        opacity: 0.25;
+    }
+}
+.vertical-center {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.inner-block {
+    width: 450px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 40px 55px 45px 55px;
+    border-radius: 15px;
+    transition: all .3s;
+}
+.maincontent{
+    background-color: white;
+}
+.color-red{
+    background: rgb(199, 36, 58)!important;
+}
+.color-red:hover{
+    background:rgb(218, 98, 114)!important;
+}
+.color-green{
+    background:rgb(0, 146, 80)!important;
+}
+.color-green:hover{
+    background:rgb(61, 182, 128)!important;
+}
+.color-gray{
+    background: #8E8E8E!important;
+}
+.color-gray:hover{
+    background: #a8a7a7!important;
+}
+.tip {
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 5px;
+}
+.background-wrapper {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.background-wrapper:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(180deg,rgba(0,0,0,.5) 0,transparent);
+}
+.blurParallaxBg {
+    background: #131313;
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.blurParallaxBg__blur {
+    position: absolute;
+    opacity: 0;
+}
+.background-wrapper .blurParallaxBg__image-clip {
+    -webkit-mask-image: linear-gradient(#000 9%,transparent 80%);
+    mask-image: linear-gradient(#000 9%,transparent 80%);
+}
+.blurParallaxBg__image-clip {
+    position: absolute;
+    overflow: hidden;
+    height: 657px;
+    width: 100%;
+    mask-image: linear-gradient(180deg,#000 0,transparent 580px);
+    -webkit-mask-image: linear-gradient(180deg,#000 0,transparent 580px);
+}
+.background-wrapper .blurParallaxBg__image--force-visibility {
+    opacity: .8;
+}
+.blurParallaxBg__image--force-visibility {
+    opacity: 1;
+}
+.blurParallaxBg__image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.userName{
+    display: block!important;
+    margin-bottom: 5px!important;
+    font-size: 24px!important;
+    font-weight: 600!important;
+    color: rgba(255, 255, 255, 0.904)!important;
+}
