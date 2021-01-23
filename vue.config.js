@@ -13,9 +13,8 @@ module.exports={
         //配置跨域代理
         proxy:{
             "/api":{
-                target:"https://api.cc.163.com",
+                target:"https://api.cc.163.com/v1/activitylives/anchor/",
                 changeOrigin:true,
-                ws: true,
                 pathRewrite:{
                     '^/api':""
                 }
@@ -23,7 +22,6 @@ module.exports={
             "/channel":{
                 target:"https://cc.163.com/live/channel",
                 changeOrigin:true,
-                ws: true,
                 pathRewrite:{
                     '^/channel':""
                 }
