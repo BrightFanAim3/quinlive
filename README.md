@@ -1,5 +1,8 @@
 # quinlive
 
+更流畅得看网易cc的直播间（使用videojs写网易cc播放器）
+该项目仅供娱乐。
+
 ## Project setup
 ```
 npm install
